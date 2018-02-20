@@ -11,8 +11,14 @@ const canvas = document.querySelector("#pixelCanvas");
 
 // When size is submitted by the user, call makeGrid()
 
-function makeGrid() {
+submit.addEventListener('click',function(e){
+  e.preventDefault();
+  if(e.target.nodeName === "INPUT"){
+  	makeGrid(height.value , weight.value );
+  }
+});
 
-// Your code goes here!
-
+function makeGrid(h, w) {
+	alert(h * w);
+	return h * w;
 }

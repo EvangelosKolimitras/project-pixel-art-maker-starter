@@ -19,6 +19,15 @@ submit.addEventListener('click',function(e){
 });
 
 function makeGrid(h, w) {
-	alert(h * w);
-	return h * w;
+
+	for(let row = 0; row < h; row++){
+		const tr    = document.createElement('tr');
+
+		for(let column = 0; column < w; column++){
+			const td    = document.createElement('td');
+			tr.appendChild(td);
+			// td.innerHTML = row * 10 + column + 1;
+		}
+		canvas.appendChild(tr);
+	}
 }
